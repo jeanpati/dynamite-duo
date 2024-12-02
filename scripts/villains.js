@@ -1,15 +1,16 @@
-import { getVillains } from "./database.js"
+import { getVillains } from "./database.js";
 
-const villains = getVillains()
+const villains = getVillains();
 
 export const VillainList = () => {
-    let villainHTML = "<ul>"
+  let villainHTML = "<ul>";
 
-    for (const villain of villains) {
-        villainHTML += `<li>${villain.name}</li>`
-    }
+  for (const villain of villains) {
+    villainHTML += `<li>Name: ${villain.name}</li>`;
+    villainHTML += `<li>Power: ${villain.power}</li>`;
+  }
 
-    villainHTML += "</ul>"
+  villainHTML += "</ul>";
 
-    return villainHTML
-}
+  return villainHTML;
+};

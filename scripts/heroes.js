@@ -1,15 +1,16 @@
-import { getHeroes } from "./database.js"
+import { getHeroes } from "./database.js";
 
-const heroes = getHeroes()
+const heroes = getHeroes();
 
 export const HeroList = () => {
-    let heroHTML = "<ul>"
+  let heroHTML = "<ul>";
 
-    for (const hero of heroes) {
-        heroHTML += `<li>${hero.name}</li>`
-    }
+  for (const hero of heroes) {
+    heroHTML += `<li>Name: ${hero.name}</li>`;
+    heroHTML += `<li>Power: ${hero.power}</li>`;
+  }
 
-    heroHTML += "</ul>"
+  heroHTML += "</ul>";
 
-    return heroHTML
-}
+  return heroHTML;
+};
